@@ -1,0 +1,83 @@
+/* COLORS */
+
+body {
+    background-color: #0C121C !important;
+  }
+.navbarColor {
+    background-color: #080D14;
+}
+
+/* BANNER PROPERTIES */
+#carouselBanner {
+    height: 65vh;
+    opacity: 0.8;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 2560px){
+    .carousel-item {
+        height: 80vh;
+    }
+    .carousel-indicators {
+        bottom: -25% !important;
+    }
+    .carousel-control-next {
+        bottom: -15% !important;
+    }
+    .carousel-control-prev {
+        bottom: -15% !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .carousel-caption {
+        bottom: 20% !important;
+    }
+    .carousel-indicators {
+        bottom: 20% !important;
+    }
+    .carousel-control-next {
+        bottom: 20% !important;
+    }
+    .carousel-control-prev {
+        bottom: 20% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-caption {
+        bottom: 40% !important;
+    }
+    .carousel-indicators {
+        bottom: 40% !important;
+    }
+    .carousel-control-next {
+        bottom: 40% !important;
+    }
+    .carousel-control-prev {
+        bottom: 40% !important;
+    }
+}
+
+@media (max-width: 425px) {
+    .carousel-indicators {
+        bottom: 60% !important;
+    }
+    .carousel-control-next {
+        bottom: 60% !important;
+    }
+    .carousel-control-prev {
+        bottom: 60% !important;
+    }
+}
