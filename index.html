@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="./css/responsive.css"/>
     <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Font Awesome -->
     <!--link css -->
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -56,12 +55,79 @@
         </div>
       </nav>
     </header>
+    <main>
+        <!-- BANNER -->
+        <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/banner/blackPanter.jpg" class="d-block w-100" alt="BlackPanter">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Black Panther: Wakanda Forever</h5>
+                  <p>La reina Ramonda, Shuri, M’Baku, Okoye y las Dora Milaje, luchan para proteger su nación de la injerencia de potencias mundiales a raíz de la muerte del rey T’Challa. Mientras los wakandianos se esfuerzan por adaptarse a su nueva etapa, los héroes deben actuar unidos...</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/banner/GatoBotas.jpg" class="d-block w-100" alt="GatoBotas">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>El gato con botas: El último deseo.</h5>
+                  <p>El Gato con Botas descubre que su pasión por la aventura le ha pasado factura: ha consumido ocho de sus nueve vidas, por ello emprende un viaje épico para encontrar el mítico Último Deseo y restaurar sus nueve vidas.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./img/banner/avatar.jpg" class="d-block w-100" alt="Avatar">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Avatar: El sentido del agua</h5>
+                  <p>Ambientada más de una década después de los acontecimientos de la primera película, ‘Avatar: The Way of Water’ empieza contando la historia de la familia Sully (Jake, Neytiri y sus hijos), los problemas que los persiguen, lo que tienen que hacer para mantenerse a salvo...</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
 <!--Fn del Navbar-->
 
         
     <main></main>
     <footer></footer>
 
+            <div class="row text-center">
+              <div class="col-12 col-md-4 mt-3 d-flex justify-content-evenly ">
+                <a href="https://twitter.com"
+                ><i class="iconos fa-brands fa-twitter fa-2x"></i
+                  ></a>
+                  <a href="https://www.instagram.com"
+                    ><i class="iconos fa-brands fa-instagram fa-2x"></i>
+                  </a>
+                  <a href="https://es-la.facebook.com"
+                  ><i class="iconos fa-brands fa-facebook fa-2x"></i
+                ></a>
+              </div>
+              <div class="col-12 col-md-4 mt-3 text-success">Acerca de nosotros</div>
+              <div class="col-12 col-md-4 mt-3 text-success">Películas</div>
+            </div>
+        </div>
+        <div class="copy justify-content-center d-flex mt-3 text-success py-3">
+          <small>&copy; 2023 - <b>Boogie</b> - Todos los Derechos
+            Reservados.</small
+          >
+        </div>
+    </footer>
+    <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/16c4b14f0f.js" crossorigin="anonymous"></script>
     <!-- BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
