@@ -23,7 +23,7 @@ function displayMovies(movies){
         card.innerHTML+=
 
         `
-        <div class="col">
+        <div class="col p-4">
         <div class="card h-100">
           <img src="${IMAGE_PATH +poster_path}" alt="${title}"/>
       <div class="card-body">
