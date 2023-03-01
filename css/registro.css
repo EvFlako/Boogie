@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* COLORS */
+
+body {
+    background-color: #0C121C !important;
+  }
+.navbarColor {
+    background-color: #080D14;
+}
+
+/* BANNER PROPERTIES */
+#carouselBanner {
+    height: 65vh;
+    opacity: 0.8;
+}
+
+.carousel-item {
+    height: 65vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* Footer */
+
+.copy{
+    background-color: #151e2f;
+
+}
+
+.iconos{
+    color: #198754;
+}
+
+
+/* boton ver mas */
+
+button.btn {
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: #479add;
+    padding: 10px 15px;
+    border-radius: 0;
+    display: inline-block;
+    line-height: 1.5;
+    text-decoration: none;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    color: white;
+}
