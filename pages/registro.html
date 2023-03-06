@@ -59,19 +59,19 @@
         <div class=" form-group">
           <div class="mb-4 fw-bold">
             <label for="nombre">Nombre y apellido</label>
-            <input type="text" id="nombre" class="form-control" name="nombre" required >
+            <input type="text" id="nombre" class="form-control" name="nombre" oninput=" validName()"required >
           </div>
           <div class="mb-4 fw-bold">
             <label for="email" class="form-label">Correo electronico</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
+            <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" oninput="validEmail()" required>
            </div>
             <div class="mb-4 fw-bold">
               <label for="password" class="form-label">Contraseña</label>
-              <input type="password" class="form-control" id="password1" name="password" required>
+              <input type="password" class="form-control" id="password1" name="password" oninput="validPass()" required>
             </div>
             <div class="mb-4 fw-bold">
               <label for="password" class="form-label">Confirmar Contraseña</label>
-              <input type="password" class="form-control" id="password2" name="password" required>
+              <input type="password" class="form-control" id="password2" name="password" oninput=""required>
             </div>
             <div class="mb-4 fw-bold" class="form-check">
               <input type="checkbox" name="connected" class="form-check-input" id="checkbox">
