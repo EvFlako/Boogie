@@ -26,9 +26,7 @@
 </head>
 
 <body>
-
     <header>
-
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid d-flex">
@@ -63,30 +61,34 @@
       </nav>
     </header>
     <main>
-        <div class="container mb-5  col-md-6 py-3">
-            <h2 class="fw-bold text-center text-primary">Contáctanos</h2>
-            <form class="">
-                <div class="form-group mb-3">
-                  <label for="form-text" class="form-label text-primary" >Nombre y Apellido</label>
-                  <input type="text" class="form-control" id="form-text" placeholder="Juan Perez" required>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="exampleFormControlInput1" class="form-label text-primary">Email</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="JuanPerez@gmail.com" required>
-                  </div>
-                <div class=" form-group mb-3">
-                  <label for="form-text" class="form-label text-primary">Motivo</label>
-                  <input type="text" class="form-control" id="form-text" placeholder="ej: Cuando sale tal película.." required>
-                </div>
-                <div class="form-group mb-3 ">
-                  <label for="form-text" class="form-label text-primary">Mensaje</label>
-                  <textarea placeholder="Ingrese su mensaje" class="form-control" id="form-text" cols="60" rows="4" required></textarea>
-                </div>
-               <div class="text-center">
-                   <input class="btn btn-primary" type="submit" value="Enviar">
-              </div>
-            </form>
+        <div class="container p-4">
+          <div id="xs-fix" class="p-4 d-flex align-items-center">
+            <div class="col-xs-12">
+              <img class="col-xs-12" src="../img/miniblackpanther.jpg" alt="BlackPanther MiniBanner">
             </div>
+            <div class="col-xs-12">
+              <header class="px-4">
+                <h1 class="text-light">Black Panther: Wakanda Forever</h4>
+                  <div>
+                    <p class="text-light">La reina Ramonda, Shuri, M’Baku, Okoye y las Dora Milaje, luchan para proteger su nación de la injerencia de potencias mundiales a raíz de la muerte del rey T’Challa. Mientras los wakandianos se esfuerzan por adaptarse a su nueva etapa, los héroes deben actuar unidos, con la ayuda del Perro de la Guerra Nakia y Everett Ross, y forzar un nuevo destino para el reino de Wakanda.</p>
+                  </div>
+                  <div>
+                    <strong class="text-warning">Director: </strong><span class="text-light">Ryan Coogler</span><br>
+                    <strong class="text-warning">Género: </strong><span class="text-light">Acción, Aventura, Drama</span><br>
+                    <strong class="text-warning">Actores: </strong><span class="text-light">Aba Arthur, Alex Livinalli, Amber Harrington, Anderson Cooper</span>
+                  </div>
+              </header>
+            </div>
+          </div>
+          <div class="embed-responsive embed-responsive-16by9 d-flex justify-content-center align-items-center">
+            <iframe id="w-video-responsive" class="embed-responsive-item" src="https://www.youtube.com/embed/p2tjD46XlnQ" title="Marvel Studios’ Black Panther: Wakanda Forever | Official Trailer | Filmed For IMAX®" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <center>
+            <button onclick="window.location.href='./error404.html';" type="button" class="btn btn-primary ">
+              Reproducir
+            </button>
+          </center>
+        </div>
     </main>
     <footer>
       <div class="row text-center">
