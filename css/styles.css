@@ -72,6 +72,6 @@ button.btn {
 
 .card-text {
     width: 100%;
-    height: 30vw;
-    object-fit:contain
+    height: 40vw;
+    object-fit:cover;
 }
