@@ -25,11 +25,11 @@ function displayMovies(movies){
         `
         <div class="col p-4">
           <div class="card h-100">
-            <div class="h-70">
-              <img src="${IMAGE_PATH +poster_path}" alt="${title}" style='height: 100%; width: 100%; object-fit: contain'/>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">${title}</h5>
+            
+              <img src="${IMAGE_PATH +poster_path}" alt="${title}" class="card-img-top img-fluid h-50"/>
+          
+            <div class="card-body h-50">
+              <h5 class="card-title h-10">${title}</h5>
               <p class="card-text">${overview}</p>
             </div>
             <div class="d-grid gap-2">
