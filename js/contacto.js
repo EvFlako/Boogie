@@ -1,7 +1,7 @@
-const nombre = document.getElementByid("nombre");
-const email = document.getElementByid("email");
-const motivo = document.getElementByid("motivo");
-const mensaje = document.getElementByid("mensaje");
+const nombre = document.getElementById("nombre");
+const email = document.getElementById("email");
+const motivo = document.getElementById("motivo");
+const mensaje = document.getElementById("mensaje");
 
 console.log("nombre.value ", nombre.value);
 
@@ -13,10 +13,10 @@ function contactar() {
     }
 }
 
-nombre.addeventlistener("input", function(event){
+nombre.addEventListener("input", function(event){
     console.log(event.target.value);
 });
 
-motivo.addeventlistener("input",(event)=>{
+motivo.addEventListener("input",(event)=>{
     console.log(event.target.value);
 })
