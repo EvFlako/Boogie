@@ -63,12 +63,12 @@
             <h2 class="fw-bold text-center text-primary">Contáctanos</h2>
             <form class="">
                 <div class="form-group mb-3">
-                  <label for="form-text" class="form-label text-primary" >Nombre y Apellido</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="Juan Perez" oninput=" contactar()" required>
+                  <label for="nombre" class="text-primary py-2" >Nombre y Apellido</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Juan Perez" oninput=" validName()" required>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="exampleFormControlInput1" class="form-label text-primary">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="JuanPerez@gmail.com" required>
+                    <label for="email" class="form-label text-primary">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="JuanPerez@gmail.com" oninput="validEmail()"required>
                   </div>
                 <div class=" form-group mb-3">
                   <label for="form-text" class="form-label text-primary">Motivo</label>
@@ -78,9 +78,9 @@
                   <label for="form-text" class="form-label text-primary">Mensaje</label>
                   <textarea placeholder="Ingrese su mensaje" class="form-control" id="mensaje" cols="60" rows="4" required></textarea>
                 </div>
-               <div class="text-center">
-                   <input class="btn btn-primary" type="submit" value="Enviar">
-              </div>
+                <div class="text-center">
+                  <button onclick="contactar()" type="submit" class="btn btn-primary" id="Enviar" >Enviar</button>
+                </div>
             </form>
             </div>
     </main>
