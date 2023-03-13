@@ -23,9 +23,8 @@ function displayMovies(movies){
         card.innerHTML+=
 
         `
-        <div class="col p-4">
+        <div class="col col-xxl-3 col-xl-4 col-lg-6 col-md-6 p-4">
           <div class="card h-100">
-            
               <img src="${IMAGE_PATH +poster_path}" alt="${title}" class="card-img-top img-fluid h-50"/>
           
             <div class="card-body h-50">
