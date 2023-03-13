@@ -103,31 +103,26 @@
       </div>
       <div class="modal-body">
         <div class="mb-3">
+          <label for="formGroupExampleInput" class="form-label">Codigo</label>
+          <input type="text" class="form-control" id="peli-codigo" placeholder="Avatar">
+        </div>
+        <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Nombre de la película</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Avatar">
+          <input type="text" class="form-control" id="peli-name" placeholder="Avatar">
         </div>
         <div class="mb-3">
           <label for="formGroupExampleInput2" class="form-label">Categoría</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Drama">
+          <input type="text" class="form-control" id="peli-cat" placeholder="Drama">
         </div>
         <div class="mb-3">
           <label for="formGroupExampleInput" class="form-label">Descripción</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+          <input type="text" class="form-control" id="peli-desc" placeholder="">
         </div>
-        <div class="row mb-3">
-          <div class="col-sm-10 offset-sm-2">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck1">
-              <label class="form-check-label" for="gridCheck1">
-                Agregar a Destacadas
-              </label>
-            </div>
-          </div>
-        </div>
+    
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Guardar</button>
+        <button type="button" class="btn btn-primary" onclick="saveMovie()" id="add-to-list">Guardar</button>
       </div>
     </div>
   </div>
@@ -159,8 +154,21 @@
             <th>Opciones</th>
         </tr>
     </thead>
-    <tbody>
-        <tr>
+    <tbody class="pelis" id="pelis">
+    <!--  <tr id="peli-items">
+        <td>
+          <button>
+                <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <button>
+                <i class="fa-solid fa-trash"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-star"></i>
+          </button>
+      </td>
+      </tr>
+        <tr class="peli">
             <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
             <td>123</td>
             <td>aaaaa</td>
@@ -179,7 +187,7 @@
                 </button>
             </td>
         </tr>
-        <tr>
+        <tr class="peli">
             <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
             <td>123</td>
             <td>aaaaa</td>
@@ -198,7 +206,7 @@
               </button>
             </td>
         </tr>
-        <tr>
+        <tr class="peli">
             <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
             <td>123</td>
             <td>aaaaa</td>
@@ -217,7 +225,7 @@
               </button>
             </td>
         </tr>
-        <tr>
+        <tr class="peli">
             <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
             <td>123</td>
             <td>aaaaa</td>
@@ -236,7 +244,7 @@
               </button>
             </td>
         </tr>
-       
+       -->
     </tbody>
 </table>
 </div>
@@ -255,4 +263,5 @@
 <!-- BOOTSTRAP -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="https://kit.fontawesome.com/f994b2ac7e.js" crossorigin="anonymous"></script>
+<script src="../js/admin.js"></script>
 </body>
