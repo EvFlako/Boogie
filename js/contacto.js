@@ -3,15 +3,16 @@ const email = document.getElementById("email");
 const motivo = document.getElementById("motivo");
 const mensaje = document.getElementById("mensaje");
 
+function contactar() {
+    if(validEmail() === true){
+        console.log("ejecutar guardado");
+    }
 
-console.log("nombre.value ", nombre.value);
-
-// function contactar(){
-//     console.log(validEmail());
-//     if(validEmail()=== true && validName()=== true){
-//         console.log(("ejecutar guardado"));
-//     }
-// }
+    // validName();
+    // validEmail();
+    // validMotivo();
+    // validMensaje();
+}
 
 function validEmail(){
     const emailRegex= /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
@@ -24,7 +25,7 @@ function validEmail(){
         email.style.background = "red";
         return false;
     }else return true;
-    }
+}
     
 function validName(){
     let valNombre = nombre.value;
@@ -90,4 +91,5 @@ motivo.addEventListener("input", function (event){
    }else{
        mensaje.style.background = "#fff";
     }
-     }) 
+     })
+ 
