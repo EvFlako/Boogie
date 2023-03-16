@@ -1,5 +1,6 @@
 
 const newMovies = [];
+window.localStorage.getItem(newMovies)
 
 class Movie {
     constructor (id, name, category, description) {
@@ -10,6 +11,54 @@ class Movie {
     }
 }
 let string = JSON.stringify(Movie)
+
+
+function addMovies () {
+document.getElementById("add-to-list").addEventListener("click", () => {
+    const addMovie = document.querySelector(".pelis")
+    addMovie.innerHTML = "";
+
+    newMovies.forEach ((newMovie) => {
+        const tabla = document.createElement("tr");
+        tabla.className = "nueva-peli";
+        tabla.id = `${"peli" + newMovies.length ++}`
+
+        const tarjeta = `
+        <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+        <td>${newMovie.id}</td>
+        <td>${newMovie.name}</td>
+        <td>${newMovie.cat}</td>
+        <td>${newMovie.desc}</td>
+        <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+        <td>
+            <button>
+                  <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button>
+                  <i class="fa-solid fa-trash" onclick=""></i>
+            </button>
+            <button>
+              <i class="fa-solid fa-star"></i>
+            </button>
+        </td>
+    </tr>
+        `;
+
+        tabla.innerHTML = tarjeta;
+
+        addMovie.append(tabla);
+
+        console.log(addMovie)
+
+
+    });
+
+    
+
+});
+
+}
+
 function saveMovie() {
 
     let id = document.getElementById("peli-codigo").value
@@ -17,53 +66,14 @@ function saveMovie() {
     let cat = document.getElementById("peli-cat").value
     let desc = document.getElementById("peli-desc").value
     let newMovie = new Movie (id, name, cat, desc)
-    console.log(newMovie);
+    //console.log(newMovie);
     newMovies.push(newMovie);
     localStorage.setItem("newMovie", JSON.stringify(newMovie));
     console.log(newMovies);
 
     
-    document.querySelector("#add-to-list").addEventListener("click", () => {
-        const addMovie = document.querySelector(".pelis")
-        addMovie.innerHTML = "";
-    
-        newMovies.forEach ((newMovie) => {
-            const tabla = document.createElement("tr");
-            tabla.className = "nueva-peli";
-    
-            const tarjeta = `
-            <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
-            <td>${newMovie.id}</td>
-            <td>${newMovie.name}</td>
-            <td>${newMovie.cat}</td>
-            <td>${newMovie.desc}</td>
-            <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
-            <td>
-                <button>
-                      <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-                <button>
-                      <i class="fa-solid fa-trash" onclick=""></i>
-                </button>
-                <button>
-                  <i class="fa-solid fa-star"></i>
-                </button>
-            </td>
-        </tr>
-            `;
-    
-            tabla.innerHTML = tarjeta;
-    
-            addMovie.append(tabla);
-
-
-        });
-
-        
-    
-    });
 
 }
 ;
 
-
+addMovies()
