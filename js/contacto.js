@@ -5,9 +5,17 @@ const mensaje = document.getElementById("mensaje");
 
 function contactar() {
     if(validEmail() === true){
-        console.log("ejecutar guardado");
-    }
-
+        Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "fabriziobagnasco2001@gmail.com",
+        Password : "CB6E452E131240BC57E990EBF6D60E984E0D",
+        To : 'bagnascofabrizio2001@gmail.com',
+        From : "fabriziobagnasco2001@gmail.com",
+        Subject : "Gracias por contactarnos!",
+        Body : "Estamos contentos con que te hayas podido contactar con nosotros, tu motivo sera revisado !!",
+    })
+     return alert("Se envio con exito!!");
+    } else return alert("No se pudo enviar.");
     // validName();
     // validEmail();
     // validMotivo();
