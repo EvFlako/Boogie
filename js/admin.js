@@ -1,6 +1,11 @@
 
 const newMovies = [];
-window.localStorage.getItem(newMovies)
+
+/* function removeMovie() {
+const removeBtn = document.getElementById("delete-btn")
+    removeBtn.addEventListener("click", () => {
+        newMovies = newMovies.filter(("addMovie") => addMovie.id !== tabla.id)
+    }); }*/ 
 
 class Movie {
     constructor (id, name, category, description) {
@@ -24,20 +29,19 @@ document.getElementById("add-to-list").addEventListener("click", () => {
         tabla.id = `${"peli" + newMovies.length ++}`
 
         const tarjeta = `
-        <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
         <td>${newMovie.id}</td>
         <td>${newMovie.name}</td>
         <td>${newMovie.cat}</td>
         <td>${newMovie.desc}</td>
         <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
         <td>
-            <button>
+            <button id="edit-btn">
                   <i class="fa-solid fa-pen-to-square"></i>
             </button>
-            <button>
-                  <i class="fa-solid fa-trash" onclick=""></i>
+            <button id="delete-btn">
+                  <i class="fa-solid fa-trash" onclick="removeMovie()"></i>
             </button>
-            <button>
+            <button id="highlight-btn">
               <i class="fa-solid fa-star"></i>
             </button>
         </td>
@@ -49,7 +53,6 @@ document.getElementById("add-to-list").addEventListener("click", () => {
         addMovie.append(tabla);
 
         console.log(addMovie)
-
 
     });
 
@@ -75,5 +78,8 @@ function saveMovie() {
 
 }
 ;
+
+
+
 
 addMovies()
