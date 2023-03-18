@@ -88,16 +88,16 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-   fetch("https://formsubmit.co/francopaviolo22@gmail.com",(
+  /* fetch("https://formsubmit.co/francopaviolo22@gmail.com",(
 	method="POST",
 	body=new FormData(e.target)	
    ))
-   .then(res=>res.ok ? res.json():Promise.reject(res))
-   .then(json =>(console.log(json)
+   .then(res=>res.ok ? res.JSON():Promise.reject(res))
+   .then(JSON =>(console.log(JSON)
    ))
    .catch(err=>(
 	console.log(err)
-   )); 
+   )); */
    
 
 	const terminos = document.getElementById('terminos');
