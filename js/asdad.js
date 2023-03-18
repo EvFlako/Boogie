@@ -1,5 +1,4 @@
-
-movie1 = {
+let movie1 = {
     id:123,
     name: "avatar",
     cat: "acción",
@@ -13,25 +12,19 @@ let movie2 = {
     desc: ""
 }
 
+let pelisArr = [movie1, movie2]
 
-let newMovies = [movie1, movie2];
-let newMovie
+let newMovies = JSON.parse(localStorage.getItem(pelisArr));
 
-localStorage.setItem("newMovie", JSON.stringify(newMovies));
 
-const cargaInicial = () => {
-    newMovies=JSON.parse(localStorage.getItem("newMovie")) || []
-    if (newMovies.length>0) {
-        newMovies.forEach(newMovie => {
-            addMovies(newMovie);
-        })
-    }
-}
 
+//function removeMovie() {
+  //      newMovies = newMovies.filter(("addMovie") => addMovie.id !== tabla.id)
+    //}
 
 class Movie {
-    constructor (id, name, category, description) {
-        this.id = id;
+    constructor (code, name, category, description) {
+        this.cod = code;
         this.name = name;
         this.cat = category;
         this.desc = description;
@@ -40,6 +33,7 @@ class Movie {
 
 
 function addMovies () {
+    localStorage.getItem("newMovies")
 document.getElementById("add-to-list").addEventListener("click", () => {
     const addMovie = document.querySelector(".pelis")
     addMovie.innerHTML = "";
@@ -50,7 +44,7 @@ document.getElementById("add-to-list").addEventListener("click", () => {
         tabla.id = `${"peli" + newMovies.length ++}`
 
         const tarjeta = `
-        <td>${newMovie.id}</td>
+        <td>${newMovie.cod}</td>
         <td>${newMovie.name}</td>
         <td>${newMovie.cat}</td>
         <td>${newMovie.desc}</td>
@@ -60,7 +54,7 @@ document.getElementById("add-to-list").addEventListener("click", () => {
                   <i class="fa-solid fa-pen-to-square"></i>
             </button>
             <button id="delete-btn">
-                  <i class="fa-solid fa-trash" onclick="deleteMovie()"></i>
+                  <i class="fa-solid fa-trash" onclick="removeMovie()"></i>
             </button>
             <button id="highlight-btn">
               <i class="fa-solid fa-star"></i>
@@ -72,6 +66,8 @@ document.getElementById("add-to-list").addEventListener("click", () => {
         tabla.innerHTML = tarjeta;
 
         addMovie.append(tabla);
+
+        console.log(addMovie)
 
     });
 
@@ -91,25 +87,11 @@ function saveMovie() {
     //console.log(newMovie);
     newMovies.push(newMovie);
     localStorage.setItem("newMovie", JSON.stringify(newMovies));
-    
-    
+    console.log(newMovies);
 
     addMovies()
-    
+
 }
 ;
 
-
-function deleteMovie() {
-    let removeBtn = document.getElementById("delete-btn")
-     removeBtn.addEventListener("click", () => {
-         newMovies = newMovies.filter("")
-     }); }
-
-     cargaInicial()
-     addMovies()
-
-
-
-
-
+addMovies()
