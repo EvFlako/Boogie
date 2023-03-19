@@ -88,17 +88,7 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-  /* fetch("https://formsubmit.co/francopaviolo22@gmail.com",(
-	method="POST",
-	body=new FormData(e.target)	
-   ))
-   .then(res=>res.ok ? res.JSON():Promise.reject(res))
-   .then(JSON =>(console.log(JSON)
-   ))
-   .catch(err=>(
-	console.log(err)
-   )); */
-   
+	
 
 	const terminos = document.getElementById('terminos');
 	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
@@ -116,3 +106,19 @@ formulario.addEventListener('submit', (e) => {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
 	}
 });
+
+
+function enviarMail(){
+	Email.send({
+		Host : "smtp.elasticemail.com",
+		Username : "francopaviolo22@gmail.com",
+		Password : "5661E7B60BEC6D8E5F1386F4780E2E56F2ED",
+		To : 'francopaviolo22@gmail.com',
+		From : "francopaviolo22@gmail.com",
+		Subject : "bienvenido a boogie",
+		Body : "su registro se realizo correctamente "
+	}).then(
+	  message => alert(message)
+	);
+   
+}
