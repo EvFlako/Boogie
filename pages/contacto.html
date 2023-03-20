@@ -22,7 +22,16 @@
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous"
     />
+<<<<<<< HEAD
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+=======
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   
+    <script type="text/javascript">
+  emailjs.init('dNjUPG5RXy6RsBTGu')
+    </script>
+>>>>>>> 113b9fbaf48c602682a5d7dd351ca6e429ee9f9e
     <title>Boogie</title>
 </head>
 
@@ -66,8 +75,9 @@
     <main>
         <div class="container mb-5  col-md-6 py-3">
             <h2 class="fw-bold text-center text-primary">Contáctanos</h2>
-            <form class="">
+            <form action="https://formsubmit.co/bel.mz.21@gmail.com" method="POST">
                 <div class="form-group mb-3">
+<<<<<<< HEAD
                   <label for="nombre" class="text-primary py-2" >Nombre y Apellido</label>
                   <input type="text" class="form-control" id="nombre" placeholder="Juan Perez" oninput="validName()" required>
                 </div>
@@ -86,6 +96,26 @@
                 <div class="text-center">
                   <button onclick="contactar()" type="submit" class="btn btn-primary" id="Enviar" >Contactar</button>
                 </div>
+=======
+                  <label for="form-text" class="form-label text-primary" >Nombre y Apellido</label>
+                  <input type="text" name="name" class="form-control" id="form-text" placeholder="Juan Perez" required>
+                </div>
+                <div class="form-group mb-3">
+                    <label for="exampleFormControlInput1" class="form-label text-primary">Email</label>
+                    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="JuanPerez@gmail.com" required>
+                  </div>
+                <div class=" form-group mb-3">
+                  <label for="form-text" class="form-label text-primary">Motivo</label>
+                  <input type="text" name="subjet" class="form-control" id="form-text" placeholder="ej: Cuando sale tal película.." required>
+                </div>
+                <div class="form-group mb-3 ">
+                  <label for="form-text" class="form-label text-primary">Mensaje</label>
+                  <textarea placeholder="Ingrese su mensaje" name="comments" class="form-control" id="form-text" cols="60" rows="4" required></textarea>
+                </div>
+               <div class="text-center">
+                   <input class="btn btn-primary" type="submit" id="button" value="Enviar">
+              </div>
+>>>>>>> 113b9fbaf48c602682a5d7dd351ca6e429ee9f9e
             </form>
             </div>
     </main>
@@ -116,6 +146,10 @@
         </small>
       </div>
     </footer>
+<<<<<<< HEAD
+=======
+    <script src="./js/app.js"></script>
+>>>>>>> 113b9fbaf48c602682a5d7dd351ca6e429ee9f9e
     <script src="../js/contacto.js"></script>
     <!-- Font Awesome -->
       <script src="https://kit.fontawesome.com/16c4b14f0f.js" crossorigin="anonymous"></script>
