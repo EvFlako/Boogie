@@ -20,10 +20,10 @@ function login() {
     else {
         if (existUser.admin === true) {
             console.log ("es admin")
-            window.location = "/home/mfrascarolo/RollingCode/Boogie/pages/admin.html"
+            window.location = "http://127.0.0.1:5502/pages/admin.html"
             localStorage.setItem("isAdmin", true);
         } else {
-            window.location = "/home/mfrascarolo/RollingCode/Boogie/index.html"
+            window.location = "http://127.0.0.1:5502/index.html"
             localStorage.setItem("isAdmin", false);
         }
     }
