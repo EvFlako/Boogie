@@ -1,11 +1,11 @@
 /* RESPONSIVE */
 
-@media (min-width: 2560px){
+@media (min-width: 1445px) and (max-width: 2560px){
     .carousel-item {
         height: 80vh;
     }
     .carousel-indicators {
-        bottom: -25% !important;
+        bottom: -1% !important;
     }
     .carousel-control-next {
         bottom: -15% !important;
@@ -13,14 +13,29 @@
     .carousel-control-prev {
         bottom: -15% !important;
     }
+    #w-video-responsive {
+        width: 1232px;
+        height: 693px;
+    }
+    #carouselBanner {
+        height: 80vh;
+    }
 }
+
+@media (min-width: 1025px) and (max-width: 1440px){
+    #w-video-responsive {
+        width: 1232px;
+        height: 693px;
+    }
+}
+
 
 @media (min-width: 768px) and (max-width: 1024px){
     .carousel-caption {
         bottom: 20% !important;
     }
     .carousel-indicators {
-        bottom: 20% !important;
+        bottom: -7% !important;
     }
     .carousel-control-next {
         bottom: 20% !important;
@@ -28,9 +43,16 @@
     .carousel-control-prev {
         bottom: 20% !important;
     }
+    #w-video-responsive {
+        width: 836px;
+        height: 480px;
+    }
+    #carouselBanner {
+        height: 50vh;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .carousel-caption {
         bottom: 40% !important;
     }
@@ -43,9 +65,14 @@
     .carousel-control-prev {
         bottom: 40% !important;
     }
+    #w-video-responsive {
+        width: 400px;
+        height: 200px;
+    }
+
 }
 
-@media (max-width: 425px) {
+@media (max-width: 766px) and (min-width: 425px) {
     .carousel-indicators {
         bottom: 60% !important;
     }
@@ -54,5 +81,9 @@
     }
     .carousel-control-prev {
         bottom: 60% !important;
+    }
+    #xs-fix {
+        display: flex;
+        flex-direction: column;
     }
 }
