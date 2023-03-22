@@ -17,7 +17,7 @@ function login() {
     
 
     if (!existUsuario){ 
-        return alert ("no existe el usuario");
+        return alert ("email o contraseña son incorrectos");
 } else {
        isAdmin(existUsuario)
 };
