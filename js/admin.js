@@ -1,5 +1,5 @@
 
-movie1 = {
+let movie1 = {
     id:123,
     name: "avatar",
     cat: "acción",
@@ -11,19 +11,24 @@ let movie2 = {
     name: "Gato con botas",
     cat: "infantil",
     desc: ""
-}
+} 
 
 
-let newMovies = [movie1, movie2];
-let newMovie
+let newMovies = [];
+newMovies.push(movie1,movie2)
+//localStorage.setItem("newMovie", JSON.stringify(newMovies));
 
-localStorage.setItem("newMovie", JSON.stringify(newMovies));
+let localMovies = window.localStorage.getItem("newMovie");
+/*if (localMovies) {
+    newMovies.push(JSON.parse(localMovies))
+    addMoviesLocal()
+} */
 
 const cargaInicial = () => {
     newMovies=JSON.parse(localStorage.getItem("newMovie")) || []
     if (newMovies.length>0) {
         newMovies.forEach(newMovie => {
-            addMovies(newMovie);
+            addMoviesLocal()
         })
     }
 }
@@ -38,8 +43,43 @@ class Movie {
     }
 }
 
+function addMoviesLocal() {
+    const addMovie = document.querySelector(".pelis")
+    addMovie.innerHTML = "";
 
-function addMovies () {
+    newMovies.forEach ((newMovie) => {
+        const tabla = document.createElement("tr");
+        tabla.className = "nueva-peli";
+        tabla.id = `${"peli" + newMovies.length ++}`
+
+        const tarjeta = `
+        <td>${newMovie.id}</td>
+        <td>${newMovie.name}</td>
+        <td>${newMovie.cat}</td>
+        <td>${newMovie.desc}</td>
+        <td class="table-checkbox"><input type="checkbox" name="" id=""></td>
+        <td>
+            <button id="edit-btn">
+                  <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button id="delete-btn">
+                  <i class="fa-solid fa-trash" onclick="deleteMovie()"></i>
+            </button>
+            <button id="highlight-btn">
+              <i class="fa-solid fa-star"></i>
+            </button>
+        </td>
+    </tr>
+        `;
+
+        tabla.innerHTML = tarjeta;
+
+        addMovie.append(tabla);
+
+    });
+}
+
+function addMovies() {
 document.getElementById("add-to-list").addEventListener("click", () => {
     const addMovie = document.querySelector(".pelis")
     addMovie.innerHTML = "";
@@ -75,10 +115,9 @@ document.getElementById("add-to-list").addEventListener("click", () => {
 
     });
 
-    
+
 
 });
-
 }
 
 function saveMovie() {
@@ -92,24 +131,19 @@ function saveMovie() {
     newMovies.push(newMovie);
     localStorage.setItem("newMovie", JSON.stringify(newMovies));
     
-    
-
-    addMovies()
-    
 }
 ;
 
 
-function deleteMovie() {
+/*function deleteMovie() {
     let removeBtn = document.getElementById("delete-btn")
      removeBtn.addEventListener("click", () => {
          newMovies = newMovies.filter("")
-     }); }
+     }); } */
 
-     cargaInicial()
      addMovies()
 
-
+cargaInicial()
 
 
 
