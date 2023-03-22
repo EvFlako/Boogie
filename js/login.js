@@ -6,52 +6,51 @@ const local = localStorage.getItem("users");
 
 
 const results = JSON.parse (local);
-console.log("results", results)
 
 
 function login() {
     const emailValue = email.value;
-    const passwordValue = password.value;   
+    const passwordValue = password.value;
+
     
     const existUsuario = existUser(emailValue, passwordValue);
     
 
-    if (!existUsuario) return alert ("no existe el usuario");
-    else {
-        if (existUser.admin === true) {
-            console.log ("es admin")
-            window.location = "http://127.0.0.1:5502/pages/admin.html"
-            localStorage.setItem("isAdmin", true);
-        } else {
-            window.location = "http://127.0.0.1:5502/index.html"
-            localStorage.setItem("isAdmin", false);
-        }
-    }
+    if (!existUsuario){ 
+        return alert ("no existe el usuario");
+} else {
+       isAdmin(existUsuario)
 };
 
 
 
-function existUser (emailValue) {
+function existUser(emailValue, passwordValue) {
     let resp = false;
     for (let i = 0; i < results.length; i++) {
-        let bbdUser = results[i];
+        let localUser = results[i];
 
-        if (bbdUser.email === emailValue) {
-            resp = bbdUser;
+        if (localUser.email === emailValue && localUser.password === passwordValue) {
+            resp = localUser;
         }
-    }
+    };
     return resp;
 };
 
-function userValido(emailValue, passwordValue) {
-    let resp = false;
-    results.map((result) => {
-        if (result.email === emailValue && result.password === passwordValue) {
-            resp = resubbdUser;
-        }
-    });
-    return resp;
 };
+
+
+function isAdmin(user) {
+    if (user.admin === true) {
+        console.log ("es admin")
+        window.location = "http://127.0.0.1:5502/pages/admin.html"
+        localStorage.setItem("isAdmin", true);
+    } else {
+        window.location = "http://127.0.0.1:5502/index.html"
+        localStorage.setItem("isAdmin", false);
+    };
+};
+
+
 
 
 
