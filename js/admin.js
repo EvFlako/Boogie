@@ -11,7 +11,7 @@ let movie2 = {
     name: "Gato con botas",
     cat: "infantil",
     desc: ""
-} 
+}  
 
 
 let newMovies = [];
@@ -19,10 +19,10 @@ newMovies.push(movie1,movie2)
 //localStorage.setItem("newMovie", JSON.stringify(newMovies));
 
 let localMovies = window.localStorage.getItem("newMovie");
-/*if (localMovies) {
+if (localMovies) {
     newMovies.push(JSON.parse(localMovies))
     addMoviesLocal()
-} */
+}
 
 const cargaInicial = () => {
     newMovies=JSON.parse(localStorage.getItem("newMovie")) || []

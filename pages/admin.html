@@ -104,34 +104,78 @@
     <!--Fn del Navbar-->
 
     <main>
+
+      <div class="container-fluid">
+        <div class="row">
       <h2 class="u-name">Panel de Administración</h2>
 
-      <div class="body">
+      <div class="body col-lg-2">
         <!--- Barra lateral Izquierda---------->
         <nav class="side-bar-left">
           <!---- Imagen del perfil------>
           <div class="user-p">
-            <img src="#" alt="imagen del perfil" class="perfil" />
+            <img src="../img/profile.png" alt="imagen del perfil" class="perfil" />
           </div>
 
           <ul>
             <li>
-              <a href="">
+              <a href="./error404.html">
                 <i class="fa fa-user"></i>
                 <span>Perfil</span>
               </a>
             </li>
 
             <li>
-              <a href="">
+              <a href="./admin.html">
                 <i class="fa fa-tabla"></i>
                 <span>Administrar</span>
               </a>
             </li>
 
-<<<<<<< HEAD
             <li>
-              <a href="">
+              <!-- Button trigger modal -->
+            <button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Agregar película
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Agregar Película</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Codigo</label>
+                      <input type="number" class="form-control" id="peli-codigo" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Nombre de la película</label>
+                      <input type="text" class="form-control" id="peli-name" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput2" class="form-label">Categoría</label>
+                      <input type="text" class="form-control" id="peli-cat" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="formGroupExampleInput" class="form-label">Descripción</label>
+                      <input type="text" class="form-control" id="peli-desc" required>
+                    </div>
+                
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" onclick="saveMovie()" id="add-to-list">Guardar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </li>
+
+            <li>
+              <a href="../index.html">
                 <i class="fa fa-power-off"></i>
                 <span>Salir</span>
               </a>
@@ -139,74 +183,11 @@
           </ul>
         </nav>
       </div>
-      <table
-        id="tabla"
-        class="table table-container"
-        style="width: 60% aligne-center"
-      >
-        <thead>
-          <tr>
-            <th></th>
-=======
-<li>
-  <!-- Button trigger modal -->
-<button type="button" class="btn text-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Agregar película
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Agregar Película</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Codigo</label>
-          <input type="text" class="form-control" id="peli-codigo">
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Nombre de la película</label>
-          <input type="text" class="form-control" id="peli-name" placeholder="Avatar">
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput2" class="form-label">Categoría</label>
-          <input type="text" class="form-control" id="peli-cat" placeholder="Drama">
-        </div>
-        <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label">Descripción</label>
-          <input type="text" class="form-control" id="peli-desc" placeholder="">
-        </div>
-    
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary" onclick="saveMovie()" id="add-to-list">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-</li>
-
-
-<li>
-    <a href="../pages/login.html">
-    <i class="fa fa-power-off"></i>
-    <span>Salir</span>
-    </a>
-</li>
-            
-</ul>
-</nav>
-</div>
 
 <div class="col col-lg-10 align-items-center p-5">
 <table id="tabla" class="table table-container" style="width:60% aligne-center">
     <thead>
         <tr>
->>>>>>> page-admin
             <th>Codigo</th>
             <th>Nombre</th>
             <th>Categoria</th>
@@ -215,7 +196,7 @@
             <th>Opciones</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="pelis" id="pelis">
 
         </tbody>
       </table>
@@ -250,6 +231,7 @@
       </div>
     </footer>
 
+    <script src="../js/admin.js"></script>
     <script
       src="https://kit.fontawesome.com/16c4b14f0f.js"
       crossorigin="anonymous"
