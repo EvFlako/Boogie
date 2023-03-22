@@ -15,7 +15,7 @@ let movie2 = {
 
 
 let newMovies = [];
-newMovies.push(movie1,movie2)
+//newMovies.push(movie1,movie2)
 //localStorage.setItem("newMovie", JSON.stringify(newMovies));
 
 let localMovies = window.localStorage.getItem("newMovie");
