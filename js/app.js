@@ -29,7 +29,7 @@ function displayMovies(movies) {
         <p class="card-text">${overview}</p>
         </div>
         <div class="d-grid gap-2">
-                <button class="btn btn-success" type="button" onclick="window.location.href='./pages/error404.html'">Ver Mas</button>
+                <button class="btn btn-secondary" type="button" onclick="window.location.href='./pages/error404.html'">Ver Mas</button>
         </div>
       </div>
     </div> `
