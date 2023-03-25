@@ -5,16 +5,23 @@
     id: 123,
     name: "Avatar",
     cat: "Acción",
-    desc: "",
+    desc: "Ambientada más de una década después...",
   };
   
   let movie2 = {
     id: 124,
     name: "Gato con botas",
     cat: "Infantil",
-    desc: "",
+    desc: "El Gato con Botas descubre..."
   };
-  newMovies.push(movie1, movie2);
+
+  let movie3 = {
+    id: 125,
+    name: "Black Panther",
+    cat: "Accion",
+    desc: "La reina Ramonda, Shuri, M’Baku, Okoye y..."
+  }
+  newMovies.push(movie1, movie2, movie3);
 localStorage.setItem("newMovie", JSON.stringify(newMovies))
   
   const cargaInicial = () => {
