@@ -15,7 +15,7 @@
     desc: "",
   };
   newMovies.push(movie1, movie2);
-  //localStorage.setItem("newMovie", JSON.stringify(newMovies))
+localStorage.setItem("newMovie", JSON.stringify(newMovies))
   
   const cargaInicial = () => {
     newMovies = JSON.parse(localStorage.getItem("newMovie")) || [];
