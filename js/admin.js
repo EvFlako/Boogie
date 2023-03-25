@@ -5,17 +5,18 @@
     id: 123,
     name: "Avatar",
     cat: "Acción",
-    desc: "",
+    desc: "Ambientada más de una década después",
   };
   
   let movie2 = {
     id: 124,
     name: "Gato con botas",
     cat: "Infantil",
-    desc: "",
+    desc: "El Gato con Botas descubre",
   };
+  
   newMovies.push(movie1, movie2);
-localStorage.setItem("newMovie", JSON.stringify(newMovies))
+//localStorage.setItem("newMovie", JSON.stringify(newMovies))
   
   const cargaInicial = () => {
     newMovies = JSON.parse(localStorage.getItem("newMovie")) || [];
