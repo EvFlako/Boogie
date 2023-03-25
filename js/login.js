@@ -42,10 +42,10 @@ function existUser(emailValue, passwordValue) {
 function isAdmin(user) {
     if (user.admin === true) {
         console.log ("es admin")
-        window.location = "http://127.0.0.1:5502/pages/admin.html"
+        window.location.href = "./admin.html"
         localStorage.setItem("isAdmin", true);
     } else {
-        window.location = "http://127.0.0.1:5502/index.html"
+        window.location.href = "../index.html"
         localStorage.setItem("isAdmin", false);
     };
 };
@@ -55,7 +55,7 @@ function isAdmin(user) {
 
 
 
-/*const users = [
+const users = [
     {
         id: 1,
         name: "Belen",
@@ -85,7 +85,7 @@ function isAdmin(user) {
 
 ];
 
-localStorage.setItem("users", JSON.stringify(users)); */
+localStorage.setItem("users", JSON.stringify(users));
 
 
 
