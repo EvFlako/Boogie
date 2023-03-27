@@ -17,56 +17,7 @@ body {
 main {
     min-height: 120vh;
 }
-
-/* .side-bar-left {
-    width: 250px;
-    min-height: 200vh;
-    transition: 500ms width;
-    background-color: #080D14;
-}
-    
-    
-.user-p {
-    
-    text-align: center;
-    padding-left: 15px;
-    padding-top: 17px;
-}
-    
-    
-.side-bar-left ul {
-    margin-left: 15px;
-    list-style: none;
-}
-    
-.side-bar-left ul li {
-    padding-left: 15px;
-    padding:15px;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-}
-        
-.side-bar-left ul li a {
-    
-    color: white;
-    text-decoration: none;
-    
-}
-    
-    
-.side-bar-left ul li:hover {
-    background-color: rgb(25, 29, 61);
-    
-}
-       
-    
-.u-name {
-    align-items: center;
-    color: white;
-} */
-    
-    
+  
     
 table{
     
